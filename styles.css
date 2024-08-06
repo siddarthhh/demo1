@@ -1,0 +1,139 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    font-family: 'Roboto',cursive, sans-serif;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: linear-gradient(to left, #2193b0, #6dd5ed);
+    color: #fff;
+    padding: 15px;
+    position: fixed;
+    height: 100%;
+    box-shadow: 3px 0 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+#sidebar a {
+    color: #fff;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+#sidebar a:hover, #sidebar a.active {
+    background-color: #3996ad;
+    color: #fff;
+}
+
+#content {
+    margin-left: 250px;
+    flex: 1;
+    padding: 20px;
+}
+
+.task {
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task:hover {
+    opacity: 0.9;
+}
+
+.priority-high {
+    background-color: #ff6666;
+}
+
+.priority-medium1 {
+    background-color: #ffcc66;
+}
+
+.priority-medium2 {
+    background-color: #66bfff;
+}
+
+.priority-low {
+    background-color: #66cc66;
+}
+
+.task-actions button {
+    margin-left: 5px;
+}
+
+#current-date-time {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to left, #2193b0, #6dd5ed);
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.form-control {
+    border-radius: 0.25rem;
+}
+
+.btn-primary {
+    border-radius: 0.25rem;
+}
+
+.priority-buttons .btn {
+    margin-right: 5px;
+}
+
+.priority-label {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+#title {
+    text-align: center;
+    padding: 0%;
+}
+
+.tile {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.tile h2 {
+    margin-top: 0;
+}
+
+.section-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
