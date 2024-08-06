@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="sidebar">
+        <h2>Navigation</h2>
+        <aside>
+        <a href="#date-time" class="active">Date & Time</a>
+        <a href="#user-info">User Information</a>
+        <a href="#task-list">Task List</a>
+        </aside>
+    </div>
+    <div id="content">
+        <section id="title" class="mt-2 mb-2">
+            <h1>User Panel</h1>
+        </section>
+        <div class="section-wrapper">
+            <section id="date-time" class="tile">
+                <h2>Date & Time</h2>
+                <div id="current-date-time"></div>
+            </section>
+            <section id="user-info" class="tile">
+                <h2>User Information</h2>
+                <form id="user-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </section>
+            <section id="task-list" class="tile">
+                <h2>Task List</h2>
+                <div class="form-group">
+                    <label for="task">New Task</label>
+                    <input type="text" id="task" class="form-control">
+                </div>
+                <div class="priority-buttons">
+                    <button id="p1" class="btn btn-danger">P1 High Priority</button>
+                    <button id="p2" class="btn btn-warning">P2 Medium Priority</button>
+                    <button id="p3" class="btn btn-primary">P3 Medium Priority</button>
+                    <button id="p4" class="btn btn-success">P4 Low Priority</button>
+                </div>
+                <div class="filter-buttons mt-3">
+                    <label for="task">Filter:</label>
+                    <button class="btn btn-outline-secondary" onclick="filterTasks('all')">All</button>
+                    <button class="btn btn-outline-danger" onclick="filterTasks('priority-high')">High</button>
+                    <button class="btn btn-outline-warning" onclick="filterTasks('priority-medium1')">Medium 1</button>
+                    <button class="btn btn-outline-primary" onclick="filterTasks('priority-medium2')">Medium 2</button>
+                    <button class="btn btn-outline-success" onclick="filterTasks('priority-low')">Low</button>
+                </div>
+                <ul id="task-list-items" class="list-group mt-3">
+                    <!-- Tasks will be appended here -->
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
